@@ -11,9 +11,9 @@
 
 <body class="h-full">
     <div class="min-h-full">
-        <?php require 'partials/nav.php'; ?>
+        <?php require  __DIR__ . '/../partials/nav.php'; ?>
 
-        <?php require 'partials/header.php'; ?>
+        <?php require __DIR__ . '/../partials/header.php'; ?>
 
         <main class="bg-gray-50 min-h-screen">
             <div class="mx-auto max-w-3xl py-10 px-4 sm:px-6 lg:px-8">

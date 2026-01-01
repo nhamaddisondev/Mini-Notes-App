@@ -1,8 +1,8 @@
 <?php
 
-require_once __DIR__ . '/../function.php';
-$config = require __DIR__ . '/../config.php';
-require __DIR__ . '/../Database.php';
+require_once __DIR__ . '/../../function.php';
+$config = require __DIR__ . '/../../config.php';
+require __DIR__ . '/../../Database.php';
 
 $db = new Database($config['database']);
 
@@ -25,4 +25,4 @@ if (!$note) {
 // title for header
 $header = $note['title'] ?? 'Note';
 
-require __DIR__ . '/../views/note.view.php';
+require __DIR__ . '/../../views/notes/show.view.php';
