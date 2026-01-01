@@ -2,8 +2,8 @@
 return [
     '/'            => 'controller/index.php',
     '/about'       => 'controller/about.php',
-    '/notes'       => 'controller/notes/notes.php',
+    '/notes'       => 'controller/notes/index.php',
     '/contact'     => 'controller/contact.php',
-    '/note'        => 'controller/notes/note.php',
-    '/create-note' => 'controller/notes/createnote.php',
+    '/note'        => 'controller/notes/show.php',
+    '/create-note' => 'controller/notes/create.php',
 ];
