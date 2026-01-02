@@ -13,4 +13,4 @@ $db = new Database($config['database']);
 // run query
 $notes = $db->query('SELECT * FROM `notes`')->fetchAll();
 
-require __DIR__ . '/../../views/notes/index.view.php';
+require __DIR__ .  '/../../views/notes/index.view.php';
