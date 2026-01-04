@@ -12,11 +12,11 @@ if ($uri === '' || $uri === false) {
 }
 
 // load routes (returns an array)
-$routes = require __DIR__ . '/routes.php';
+$routes = require __DIR__ . '/../routes.php';
 
 function abort($code = 404){
     http_response_code($code);
-    require 'views/404.view.php';
+    require __DIR__. '/../views/404.php';
     die();
 }
 
