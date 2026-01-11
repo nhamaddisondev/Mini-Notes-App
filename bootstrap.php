@@ -13,4 +13,5 @@ $config = require BASE_PATH . 'config.php';
 // Support either ['database' => [...]] or direct config array
 $dbConfig = $config['database'] ?? $config;
 
-$db = new Database($dbConfig);
+
+$db = new Core\Database($dbConfig);
