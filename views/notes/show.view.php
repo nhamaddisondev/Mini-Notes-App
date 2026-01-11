@@ -10,6 +10,7 @@
 </head>
 <body class="h-full">
 <div class="min-h-full">
+    <?php require __DIR__ . '/../../core/function.php'; ?>
     <?php require  __DIR__ . '/../partials/nav.php'; ?>
     <?php require __DIR__ . '/../partials/header.php'; ?>
 

@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '/../../bootstrap.php';
 // $db and $config are already loaded in public/index.php
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

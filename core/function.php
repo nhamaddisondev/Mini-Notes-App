@@ -1,5 +1,11 @@
 <?php
 
+namespace Core\Database;
+
+if (!defined('BASE_PATH')) {
+    define('BASE_PATH', dirname(__DIR__) . DIRECTORY_SEPARATOR);
+}
+
 function urlIs($value)
 {
     $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);

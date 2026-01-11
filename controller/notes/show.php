@@ -1,5 +1,7 @@
 <?php
 
+require_once __DIR__ . '/../../bootstrap.php';
+
 // $db and $config are already loaded in public/index.php
 
 // get id from query string

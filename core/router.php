@@ -1,4 +1,8 @@
 <?php
+if (!defined('BASE_PATH')) {
+    define('BASE_PATH', dirname(__DIR__) . DIRECTORY_SEPARATOR);
+}
+
 // get path part of URL
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
@@ -12,17 +16,21 @@ if ($uri === '' || $uri === false) {
 }
 
 // load routes (returns an array)
-$routes = require __DIR__ . '/../routes.php';
+$routes = require BASE_PATH . 'routes.php';
 
-function abort($code = 404){
+function abort($code = 404)
+{
     http_response_code($code);
-    require __DIR__. '/../views/404.php';
+    require BASE_PATH . 'views/404.php';
     die();
 }
 
-function routesToController($uri, $routes){
+function routesToController($uri, $routes)
+{
+    global $db, $config;
+
     if (array_key_exists($uri, $routes)) {
-        require $routes[$uri];
+        require BASE_PATH . $routes[$uri];
     } else {
         abort();
     }
