@@ -1,5 +1,5 @@
 <?php
-
+use Core\Database;
 require_once __DIR__ . '/../../bootstrap.php';
 
 // $db and $config are already loaded in public/index.php

@@ -1,4 +1,5 @@
 <?php
+use Core\Database;
 
 require_once __DIR__ . '/../../bootstrap.php';
 
