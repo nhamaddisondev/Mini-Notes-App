@@ -11,6 +11,19 @@ if ($id <= 0) {
     die('Note not found');
 }
 
+if($_SERVER['REQUEST_METHOD'] === 'POST' && $_POST['_method'] === 'DELETE') {
+    // delete the note
+    $stmt = $db->connection->prepare(
+        'DELETE FROM `notes` WHERE id = :id'
+    );
+    $stmt->execute([
+        ':id' => $id,
+    ]);
+
+    header('Location: /notes');
+    exit;
+}
+
 // load that note
 $statement = $db->query('SELECT * FROM `notes` WHERE id = ' . $id);
 $note = $statement->fetch();

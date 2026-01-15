@@ -28,6 +28,10 @@
                         <?= htmlspecialchars($note['body'] ?? '') ?>
                     </p>
                 </article>
+                <form class="mt-6" method="POST">
+                    <input type="hidden" name="_method" value="DELETE" />
+                    <button type="submit" class="rounded bg-red-500 py-2 px-4 text-white hover:bg-red-600">Delete</button>
+                </form>
             </div>
         </main>
     </div>
