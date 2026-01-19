@@ -1,4 +1,6 @@
 <?php
 
 require __DIR__ . '/../bootstrap.php';
-require BASE_PATH . 'core/router.php';
+
+$router = new Core\Router();
+require __DIR__ . '/../routes.php';
