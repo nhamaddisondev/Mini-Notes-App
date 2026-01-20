@@ -1,6 +1,4 @@
 <?php
 
-require_once __DIR__ . '/../bootstrap.php';
-
 $header = 'Contact';
-require __DIR__ . '/../views/contact.view.php';
+require base_path('views/contact.view.php');

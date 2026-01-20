@@ -7,9 +7,9 @@
 //     '/note'        => 'controller/notes/show.php',
 //     '/create-note' => 'controller/notes/create.php',
 // ];
-$router->get('/', 'controllers/index.php');
-$router->get('/about', 'controllers/about.php');
-$router->get('/contact', 'controllers/contact.php');
-$router->get('/notes', 'controllers/notes/index.php');
-$router->get('/note', 'controllers/notes/show.php');
-$router->get('/notes/create', 'controllers/notes/create.php');
+$router->get('/', 'controller/index.php');
+$router->get('/about', 'controller/about.php');
+$router->get('/contact', 'controller/contact.php');
+$router->get('/notes', 'controller/notes/index.php');
+$router->get('/note', 'controller/notes/show.php');
+$router->get('/notes/create', 'controller/notes/create.php');

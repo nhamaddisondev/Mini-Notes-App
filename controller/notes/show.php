@@ -1,6 +1,5 @@
 <?php
 use Core\Database;
-require_once __DIR__ . '/../../bootstrap.php';
 
 // $db and $config are already loaded in public/index.php
 
@@ -11,7 +10,7 @@ if ($id <= 0) {
     die('Note not found');
 }
 
-if($_SERVER['REQUEST_METHOD'] === 'POST' && $_POST['_method'] === 'DELETE') {
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_POST['_method'] === 'DELETE') {
     // delete the note
     $stmt = $db->connection->prepare(
         'DELETE FROM `notes` WHERE id = :id'
