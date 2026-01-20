@@ -1,6 +1,8 @@
 <?php
 use Core\Database;
 
+global $db, $config;
+
 $header = 'Note';
 
 // $db and $config are already loaded in public/index.php

@@ -1,6 +1,8 @@
 <?php
 use Core\Database;
 
+global $db, $config;
+
 // $db and $config are already loaded in public/index.php
 
 // get id from query string
