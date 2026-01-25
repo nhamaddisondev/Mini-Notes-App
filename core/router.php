@@ -1,4 +1,7 @@
 <?php
+
+namespace Core;
+
 // if (!defined('BASE_PATH')) {
 //     define('BASE_PATH', dirname(__DIR__) . DIRECTORY_SEPARATOR);
 // }

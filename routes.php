@@ -15,4 +15,6 @@ return function ($router) {
     $router->get('/notes', 'controller/notes/index.php');
     $router->get('/note', 'controller/notes/show.php');
     $router->get('/notes/create', 'controller/notes/create.php');
+    $router->get('/create-note', 'controller/notes/create.php');
+    $router->post('/create-note', 'controller/notes/create.php');
 };

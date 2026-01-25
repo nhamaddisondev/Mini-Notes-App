@@ -7,6 +7,7 @@ if (!defined('BASE_PATH')) {
 
 require_once BASE_PATH . 'core/function.php';
 require_once BASE_PATH . 'core/Database.php';
+require_once BASE_PATH . 'core/Router.php';
 
 $config = require BASE_PATH . 'config.php';
 
