@@ -17,4 +17,5 @@ return function ($router) {
     $router->get('/notes/create', 'controller/notes/create.php');
     $router->get('/create-note', 'controller/notes/create.php');
     $router->post('/create-note', 'controller/notes/create.php');
+    $router->delete('/note', 'controller/notes/show.php');
 };
