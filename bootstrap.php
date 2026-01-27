@@ -1,18 +1,20 @@
 <?php
 
-// Project root absolute path with trailing slash
-if (!defined('BASE_PATH')) {
-    define('BASE_PATH', __DIR__ . DIRECTORY_SEPARATOR);
-}
+require_once __DIR__ . '/core/function.php';
+require_once __DIR__ . '/core/Container.php';
+require_once __DIR__ . '/core/App.php';
+require_once __DIR__ . '/core/Database.php';
 
-require_once BASE_PATH . 'core/function.php';
-require_once BASE_PATH . 'core/Database.php';
-require_once BASE_PATH . 'core/Router.php';
+use Core\App;
+use Core\Container;
+use Core\Database;
 
-$config = require BASE_PATH . 'config.php';
+$container = new Container();
 
-// Support either ['database' => [...]] or direct config array
-$dbConfig = $config['database'] ?? $config;
+$container->bind('Core\Database', function () {
+    $config = require base_path('config.php');
 
+    return new Database($config['database']);
+});
 
-$db = new Core\Database($dbConfig);
+App::setContainer($container);

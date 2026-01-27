@@ -1,9 +1,8 @@
 <?php
+use Core\App;
 use Core\Database;
 
-global $db, $config;
-
-// $db and $config are already loaded in public/index.php
+$db = App::resolve('Core\Database');
 
 // get id from query string
 $id = isset($_GET['id']) ? (int) $_GET['id'] : 0;

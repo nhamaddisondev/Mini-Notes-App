@@ -1,10 +1,9 @@
 <?php
 
+use Core\App;
 use Core\Database;
 
-global $db, $config;
-
-// $db and $config are already loaded in public/index.php
+$db = App::resolve('Core\Database');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $title = trim($_POST['title'] ?? '');
