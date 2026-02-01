@@ -25,8 +25,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_POST['_method'] === 'DELETE') {
 }
 
 // load that note
-$statement = $db->query('SELECT * FROM `notes` WHERE id = ' . $id);
-$note = $statement->fetch();
+$note = $db->query('SELECT * FROM `notes` WHERE id = :id', [
+    'id' => $id
+])->find();
 
 if (!$note) {
     http_response_code(404);

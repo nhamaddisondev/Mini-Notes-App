@@ -18,4 +18,6 @@ return function ($router) {
     $router->get('/create-note', 'controller/notes/create.php');
     $router->post('/create-note', 'controller/notes/create.php');
     $router->delete('/note', 'controller/notes/show.php');
+    $router->get('/notes/edit', 'controller/notes/edit.php');
+    $router->post('/notes/update', 'controller/notes/update.php');
 };
