@@ -1,6 +1,7 @@
 <?php
 use Core\App;
 use Core\Database;
+$_SESSION['name'] = "Panha";
 
 $header = 'Note';
 

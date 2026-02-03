@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require __DIR__ . '/../bootstrap.php';
 
 // Make $db and $config global so controllers can access them

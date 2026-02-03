@@ -1,5 +1,9 @@
 <?php
 
+session_start();
+
+$_SESSION['name'] = "Panha";
+
 require_once __DIR__ . '/core/function.php';
 require_once __DIR__ . '/core/Container.php';
 require_once __DIR__ . '/core/App.php';
