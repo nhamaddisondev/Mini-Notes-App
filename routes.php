@@ -20,4 +20,6 @@ return function ($router) {
     $router->delete('/note', 'controller/notes/show.php');
     $router->get('/notes/edit', 'controller/notes/edit.php');
     $router->post('/notes/update', 'controller/notes/update.php');
+    $router->get('/register', 'controller/registration/create.php');
+    $router->post('/register', 'controller/registration/store.php');
 };

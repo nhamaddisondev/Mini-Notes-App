@@ -1,3 +1,10 @@
+<?php
+// Ensure helper functions such as urlIs() are available when this partial is rendered directly.
+if (!function_exists('urlIs')) {
+    require_once __DIR__ . '/../../core/function.php';
+}
+?>
+
 <nav class="bg-gray-800">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="flex h-16 items-center justify-between">
@@ -98,4 +105,5 @@
                     class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Reports</a>
             </div>
         </el-disclosure>
+    </div>
 </nav>
