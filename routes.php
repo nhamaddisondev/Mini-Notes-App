@@ -12,7 +12,7 @@ return function ($router) {
     $router->get('/', 'controller/index.php');
     $router->get('/about', 'controller/about.php');
     $router->get('/contact', 'controller/contact.php');
-    $router->get('/notes', 'controller/notes/index.php');
+    $router->get('/notes', 'controller/notes/index.php')->only('auth');
     $router->get('/note', 'controller/notes/show.php');
     $router->get('/notes/create', 'controller/notes/create.php');
     $router->get('/create-note', 'controller/notes/create.php');
@@ -20,6 +20,6 @@ return function ($router) {
     $router->delete('/note', 'controller/notes/show.php');
     $router->get('/notes/edit', 'controller/notes/edit.php');
     $router->post('/notes/update', 'controller/notes/update.php');
-    $router->get('/register', 'controller/registration/create.php');
+    $router->get('/register', 'controller/registration/create.php')->only('guest');
     $router->post('/register', 'controller/registration/store.php');
 };

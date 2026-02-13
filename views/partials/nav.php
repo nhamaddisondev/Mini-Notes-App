@@ -56,13 +56,12 @@ if (!function_exists('urlIs')) {
 
                 <?php if ($_SESSION['user'] ?? false): ?>
 
-
+                    <span class="text-gray-300 text-sm font-medium">You are signed in</span>
 
                 <?php else: ?>
 
-                    <!-- Register as text (NOT link) -->
                     <a href="/register"
-                        class="<?= urlIs('/register') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white' ?> rounded-md px-3 py-2 text-sm font-medium">
+                        class="text-gray-300 hover:bg-white/5 hover:text-white rounded-md px-3 py-2 text-sm font-medium">
                         Register
                     </a>
 
