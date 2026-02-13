@@ -2,13 +2,25 @@
 
 namespace Core\Middleware;
 
-class Authenticated
+class Middleware
 {
-    public function handle()
+    public const MAP = [
+        'guest' => Guest::class,
+        'auth' => Authenticated::class
+    ];
+
+    public static function resolve($key)
     {
-        if (! $_SESSION['user'] ?? false) {
-            header('location: /');
-            exit();
+        if (!$key) {
+            return;
         }
+
+        $middleware = static::MAP[$key] ?? false;
+
+        if (!$middleware) {
+            throw new \Exception("No matching middleware found for key '{$key}'.");
+        }
+
+        (new $middleware)->handle();
     }
 }

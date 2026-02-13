@@ -59,6 +59,8 @@ class Router
             'method' => $method,
             'middleware' => null
         ];
+
+        return $this;
     }
 
     public function get($uri, $controller)
@@ -98,11 +100,7 @@ class Router
     {
         foreach ($this->routes as $route) {
             if ($route['uri'] === $uri && $route['method'] === strtoupper($method)) {
-                global $db, $config;
-
-                if ($route['middleware']) {
-                    Middleware::resolve($route['middleware']);
-                }
+                Middleware::resolve($route['middleware']);
 
                 return require base_path($route['controller']);
             }
