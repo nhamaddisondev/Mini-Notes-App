@@ -21,5 +21,8 @@ return function ($router) {
     $router->get('/notes/edit', 'controller/notes/edit.php');
     $router->post('/notes/update', 'controller/notes/update.php');
     $router->get('/register', 'controller/registration/create.php')->only('guest');
-    $router->post('/register', 'controller/registration/store.php');
+    $router->post('/register', 'controller/registration/store.php')->only('guest');
+    $router->get('/login', 'controller/session/create.php')->only('guest');
+    $router->post('/session', 'controller/session/store.php')->only('guest');
+    $router->delete('/session', 'controller/session/destroy.php')->only('auth');
 };

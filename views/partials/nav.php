@@ -55,16 +55,22 @@ if (!function_exists('urlIs')) {
                 </button>
 
                 <?php if ($_SESSION['user'] ?? false): ?>
-
-                    <span class="text-gray-300 text-sm font-medium">You are signed in</span>
-
+                    <form method="POST" action="/session">
+                        <input type="hidden" name="_method" value="DELETE" />
+                        <button type="submit"
+                            class="text-gray-300 hover:bg-white/5 hover:text-white rounded-md px-3 py-2 text-sm font-medium">
+                            Log Out
+                        </button>
+                    </form>
                 <?php else: ?>
-
                     <a href="/register"
-                        class="text-gray-300 hover:bg-white/5 hover:text-white rounded-md px-3 py-2 text-sm font-medium">
+                        class="<?= urlIs('/register') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white' ?> rounded-md px-3 py-2 text-sm font-medium">
                         Register
                     </a>
-
+                    <a href="/login"
+                        class="<?= urlIs('/login') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white' ?> rounded-md px-3 py-2 text-sm font-medium">
+                        Login
+                    </a>
                 <?php endif; ?>
 
             </div>
