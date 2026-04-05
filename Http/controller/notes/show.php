@@ -2,7 +2,7 @@
 use Core\App;
 use Core\Database;
 
-$db = App::resolve('Core\Database');
+$db = App::resolve(Database::class);
 
 // get id from query string
 $id = isset($_GET['id']) ? (int) $_GET['id'] : 0;
@@ -11,7 +11,7 @@ if ($id <= 0) {
     die('Note not found');
 }
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_POST['_method'] === 'DELETE') {
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['_method'] ?? '') === 'DELETE') {
     // delete the note
     $stmt = $db->connection->prepare(
         'DELETE FROM `notes` WHERE id = :id'
@@ -37,4 +37,7 @@ if (!$note) {
 // title for header
 $header = $note['title'] ?? 'Note';
 
-require __DIR__ . '/../../views/notes/show.view.php';
+view('notes/show.view.php', [
+    'header' => $header,
+    'note' => $note
+]);

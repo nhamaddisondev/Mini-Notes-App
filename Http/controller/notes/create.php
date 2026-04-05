@@ -24,4 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 $header = 'Create note';
-require __DIR__ . '/../../views/notes/create.view.php';
+
+view('notes/create.view.php', [
+    'header' => $header
+]);
