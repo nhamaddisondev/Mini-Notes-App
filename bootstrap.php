@@ -4,6 +4,14 @@ session_start();
 
 $_SESSION['name'] = "Panha";
 
+spl_autoload_register(function ($class) {
+    $path = __DIR__ . '/' . str_replace('\\', '/', $class) . '.php';
+
+    if (file_exists($path)) {
+        require_once $path;
+    }
+});
+
 require_once __DIR__ . '/core/function.php';
 require_once __DIR__ . '/core/Container.php';
 require_once __DIR__ . '/core/App.php';
