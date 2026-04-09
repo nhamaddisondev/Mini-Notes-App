@@ -1,16 +1,10 @@
 <?php
+
+use Core\Session;
+
 session_start();
-require __DIR__ . '/../bootstrap.php';
+const BASE_PATH = __DIR__ . '/../'; 
 
-// Make $db and $config global so controllers can access them
-global $db, $config;
+$router->route($uri,$method);
 
-$router = new \Core\Router();
-
-$registerRoutes = require base_path('routes.php');
-$registerRoutes($router);
-
-$uri = parse_url($_SERVER['REQUEST_URI'])['path'];
-$method = $_POST['_method'] ?? $_SERVER['REQUEST_METHOD'];
-
-$router->route($uri, $method);
+Session::unflash();
