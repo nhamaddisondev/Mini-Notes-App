@@ -1,5 +1,6 @@
 <?php
 
+// Purpose: Validates login input, attempts authentication, and flashes errors on failure.
 use Core\Authenticator;
 use Core\Session;
 use Http\Forms\LoginForm;

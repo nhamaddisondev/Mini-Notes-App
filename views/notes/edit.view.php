@@ -1,3 +1,7 @@
+<?php
+// Purpose: View template that renders the edit note form.
+?>
+
 <!DOCTYPE html>
 <html lang="en" class="h-full bg-gray-100">
 

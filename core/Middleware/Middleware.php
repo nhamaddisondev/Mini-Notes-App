@@ -1,5 +1,6 @@
 <?php
 
+// Purpose: Resolves middleware aliases and executes middleware handlers.
 namespace Core\Middleware;
 
 class Middleware

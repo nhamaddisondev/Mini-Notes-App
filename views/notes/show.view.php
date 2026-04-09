@@ -1,3 +1,7 @@
+<?php
+// Purpose: View template that renders note details with edit and delete actions.
+?>
+
 <!DOCTYPE html>
 <html lang="en" class="h-full bg-gray-100">
 

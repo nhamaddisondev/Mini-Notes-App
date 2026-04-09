@@ -1,5 +1,6 @@
 <?php
 
+// Purpose: Middleware that redirects authenticated users away from guest-only pages.
 namespace Core\Middleware;
 
 class Guest

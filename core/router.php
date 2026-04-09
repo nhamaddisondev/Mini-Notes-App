@@ -1,5 +1,6 @@
 <?php
 
+// Purpose: Registers routes and matches requests to controller files with middleware checks.
 namespace Core;
 
 use Core\Middleware\Authenticated;

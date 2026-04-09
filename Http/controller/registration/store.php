@@ -1,5 +1,6 @@
 <?php
 
+// Purpose: Validates registration input, creates user accounts, and signs users in.
 use Core\App;
 use Core\Database;
 use Core\Validator;

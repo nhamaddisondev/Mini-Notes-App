@@ -1,5 +1,6 @@
-<?php 
+<?php
 
+// Purpose: Stores dependency bindings and resolves services on demand.
 namespace Core;
 
 use Exception;

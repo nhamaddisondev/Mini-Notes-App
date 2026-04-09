@@ -1,5 +1,6 @@
 <?php
 
+// Purpose: Bootstraps the application by starting the session, loading core files, and binding services.
 session_start();
 
 $_SESSION['name'] = "Panha";

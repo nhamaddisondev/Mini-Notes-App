@@ -1,5 +1,6 @@
 <?php
 
+// Purpose: Loads a single note and renders the note edit form.
 use Core\App;
 use Core\Database;
 

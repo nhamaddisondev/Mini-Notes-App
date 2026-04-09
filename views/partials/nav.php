@@ -1,4 +1,6 @@
 <?php
+
+// Purpose: Shared navigation partial with route links and auth actions.
 // Ensure helper functions such as urlIs() are available when this partial is rendered directly.
 if (!function_exists('urlIs')) {
     require_once __DIR__ . '/../../core/function.php';

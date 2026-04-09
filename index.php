@@ -1,5 +1,6 @@
 <?php
 
+// Purpose: Front controller that loads routes and dispatches the current HTTP request.
 require __DIR__ . '/bootstrap.php';
 require_once BASE_PATH . 'core/Router.php';
 

@@ -1,5 +1,6 @@
 <?php
 
+// Purpose: Provides helper methods for session storage, flash data, and session teardown.
 namespace Core;
 
 class Session

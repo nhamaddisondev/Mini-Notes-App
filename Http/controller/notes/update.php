@@ -1,5 +1,6 @@
 <?php
 
+// Purpose: Validates and updates an existing note record.
 use Core\App;
 use Core\Database;
 use Core\Validator;

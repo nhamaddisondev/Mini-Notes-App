@@ -1,3 +1,7 @@
+<?php
+// Purpose: View template that renders the notes listing cards.
+?>
+
 <!DOCTYPE html>
 <html lang="en" class="h-full bg-gray-100">
 

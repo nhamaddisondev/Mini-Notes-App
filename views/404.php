@@ -1,4 +1,6 @@
 <?php
+
+// Purpose: Renders the 404 not found error page.
 // Set the response code
 http_response_code(404);
 ?>

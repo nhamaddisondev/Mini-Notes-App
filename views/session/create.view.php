@@ -1,3 +1,7 @@
+<?php
+// Purpose: View template that renders the login form.
+?>
+
 <!DOCTYPE html>
 <html lang="en" class="h-full bg-gray-100">
 

@@ -1,5 +1,6 @@
 <?php
 
+// Purpose: Logs out the current user session and redirects to home.
 /**
  * Handle user logout.
  *

@@ -1,5 +1,6 @@
 <?php
 
+// Purpose: Handles note creation form display and note insert on POST requests.
 use Core\App;
 use Core\Database;
 

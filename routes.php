@@ -1,4 +1,6 @@
 <?php
+
+// Purpose: Registers URL routes, HTTP methods, and middleware for controller actions.
 // return [
 //     '/'            => 'controller/index.php',
 //     '/about'       => 'controller/about.php',

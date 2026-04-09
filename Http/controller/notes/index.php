@@ -1,4 +1,6 @@
 <?php
+
+// Purpose: Retrieves notes from storage and renders the notes list page.
 use Core\App;
 use Core\Database;
 $_SESSION['name'] = "Panha";

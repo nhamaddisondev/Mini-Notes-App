@@ -1,5 +1,6 @@
 <?php
 
+// Purpose: Wraps PDO operations for querying and fetching database records.
 namespace Core;
 use PDO;
 class Database

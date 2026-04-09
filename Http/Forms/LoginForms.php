@@ -1,5 +1,6 @@
 <?php
 
+// Purpose: Legacy login form validator that returns collected validation errors.
 namespace Http\Forms;
 use Core\Validator;
 class LoginForms

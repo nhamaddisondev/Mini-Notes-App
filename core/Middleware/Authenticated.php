@@ -1,5 +1,6 @@
 <?php
 
+// Purpose: Middleware that redirects guests to login when authentication is required.
 namespace Core\Middleware;
 
 class Authenticated

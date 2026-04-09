@@ -1,5 +1,6 @@
 <?php
 
+// Purpose: Handles login attempts, session login, and logout behavior.
 namespace Core;
 
 class Authenticator

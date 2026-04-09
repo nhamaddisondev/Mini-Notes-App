@@ -1,5 +1,6 @@
 <?php
 
+// Purpose: Encapsulates login form validation and error collection.
 namespace Http\Forms;
 
 use Core\Validator;

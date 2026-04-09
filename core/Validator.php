@@ -1,5 +1,6 @@
 <?php
 
+// Purpose: Provides reusable validation rules for strings and email inputs.
 namespace Core;
 
 /**

@@ -1,4 +1,6 @@
 <?php
+
+// Purpose: Loads one note, supports note deletion, and renders note details.
 use Core\App;
 use Core\Database;
 

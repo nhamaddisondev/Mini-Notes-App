@@ -1,5 +1,6 @@
 <?php
 
+// Purpose: Public web entry file that dispatches routing and clears flash data.
 use Core\Session;
 
 session_start();

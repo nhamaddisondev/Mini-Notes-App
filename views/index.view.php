@@ -1,3 +1,7 @@
+<?php
+// Purpose: View template for the Home page layout and content.
+?>
+
 <!DOCTYPE html>
 <html lang="en" class="h-full bg-gray-100">
 <head>

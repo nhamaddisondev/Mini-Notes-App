@@ -1,5 +1,6 @@
 <?php
 
+// Purpose: Static application container accessor used to bind and resolve shared services.
 namespace Core;
 
 class App

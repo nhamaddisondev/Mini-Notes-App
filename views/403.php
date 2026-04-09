@@ -1,4 +1,6 @@
 <?php
+
+// Purpose: Renders the 403 forbidden error page.
 // Set the response code
 http_response_code(403);
 ?>
