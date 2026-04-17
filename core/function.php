@@ -67,3 +67,7 @@ function logout(){
         $params['secure'], $params['httponly']
     );
 }
+function old($key, $default = '')
+{
+    return Core\Session::get('old')[$key] ?? $default;
+}
