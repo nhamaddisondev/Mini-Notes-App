@@ -21,24 +21,24 @@ if (!function_exists('urlIs')) {
                 <div class="hidden md:block ml-10">
                     <div class="flex items-baseline space-x-4">
                         <a href="/"
-                            class="<?= urlIs('/') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white' ?> rounded-md px-3 py-2 text-sm font-medium">
+                            class="<?= urlIs('/') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white' ?> rounded-md px-3 py-2 text-base font-medium">
                             Home
                         </a>
 
                         <a href="/about"
-                            class="<?= urlIs('/about') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white' ?> rounded-md px-3 py-2 text-sm font-medium">
+                            class="<?= urlIs('/about') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white' ?> rounded-md px-3 py-2 text-base font-medium">
                             About
                         </a>
 
                         <?php if ($_SESSION['user'] ?? false): ?>
                             <a href="/notes"
-                                class="<?= urlIs('/notes') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white' ?> rounded-md px-3 py-2 text-sm font-medium">
+                                class="<?= urlIs('/notes') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white' ?> rounded-md px-3 py-2 text-base font-medium">
                                 Notes
                             </a>
                         <?php endif; ?>
 
                         <a href="/contact"
-                            class="<?= urlIs('/contact') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white' ?> rounded-md px-3 py-2 text-sm font-medium">
+                            class="<?= urlIs('/contact') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white' ?> rounded-md px-3 py-2 text-base font-medium">
                             Contact
                         </a>
                     </div>
@@ -62,17 +62,17 @@ if (!function_exists('urlIs')) {
                     <form method="POST" action="/session">
                         <input type="hidden" name="_method" value="DELETE" />
                         <button type="submit"
-                            class="text-gray-300 hover:bg-white/5 hover:text-white rounded-md px-3 py-2 text-sm font-medium">
+                            class="text-gray-300 hover:bg-white/5 hover:text-white rounded-md px-3 py-2 text-base font-medium">
                             Log Out
                         </button>
                     </form>
                 <?php else: ?>
                     <a href="/register"
-                        class="<?= urlIs('/register') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white' ?> rounded-md px-3 py-2 text-sm font-medium">
+                        class="<?= urlIs('/register') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white' ?> rounded-md px-3 py-2 text-base font-medium">
                         Register
                     </a>
                     <a href="/login"
-                        class="<?= urlIs('/login') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white' ?> rounded-md px-3 py-2 text-sm font-medium">
+                        class="<?= urlIs('/login') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white' ?> rounded-md px-3 py-2 text-base font-medium">
                         Login
                     </a>
                 <?php endif; ?>

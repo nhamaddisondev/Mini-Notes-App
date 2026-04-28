@@ -1,0 +1,10 @@
+{
+    "name": "user/learn-php",
+    "authors": [
+        {
+            "name": "ChimPanhaDev",
+            "email": "panhachim168@gmail.com"
+        }
+    ],
+    "require": {}
+}

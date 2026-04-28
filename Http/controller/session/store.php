@@ -1,27 +1,24 @@
 <?php
 
-// Purpose: Validates login input, attempts authentication, and flashes errors on failure.
 use Core\Authenticator;
-use Core\Session;
+
 use Http\Forms\LoginForm;
 
-$email = $_POST['email'];
-$password = $_POST['password'];
+$form = LoginForm::validate($attributes = [
+    'email' => $_POST['email'],
+    'password' => $_POST['password']
+]);
 
-$form = new LoginForm();
+$signedIn = (new Authenticator)->attempt(
+    $attributes['email'], $attributes['password']
+);
 
-if ($form->validate($email, $password)) {
-    if ((new Authenticator)->attempt($email, $password)) {
-        header('Location: /');
-        exit();
-    }
 
-    $form->error('email', 'No matching account found for that email address and password.');
+if (!$signedIn) {
+    $form->error(
+        'email', 'No matching account found for that email address and password.'
+    )->throw();
 }
 
-Session::flash('errors', $form->errors());
-Session::flash('old',[
-    'email' => $_POST['email']
-]);
-header('Location: /login');
+header('Location: /');
 exit();
